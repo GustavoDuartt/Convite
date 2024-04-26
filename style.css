@@ -1,0 +1,121 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    background-image: url(https://img.freepik.com/fotos-gratis/belo-parque-verde-perto-do-lago-com-um-banco-cercado-por-arvores_181624-48191.jpg?t=st=1713792207~exp=1713795807~hmac=2e489b1a1052d623c146a298f7aac0963bff494d7a9875f68b5c1e7bd2cc1a53&w=740);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    background-position: center;
+}
+
+.total {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Ajusta o alinhamento vertical */
+    max-width: 1200px; /* Limita a largura máxima */
+    margin-top: 4%;
+}
+
+.box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: calc(50% - 20px); /* Calcula a largura para ser metade do container com espaço entre */
+    margin-right: 20px; /* Espaçamento entre a caixa e o formulário */
+    box-sizing: border-box; /* Considera padding e borda no cálculo de largura */
+}
+
+.formulario {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: calc(50% - 20px); /* Calcula a largura para ser metade do container com espaço entre */
+    box-sizing: border-box; /* Considera padding e borda no cálculo de largura */
+}
+
+
+h2 {
+    text-align: center;
+    color: #6cff32;
+}
+
+label {
+    font-weight: bold;
+}
+
+#yes {
+    color: green;
+}
+
+#nop {
+    color: red;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Considera padding e borda no cálculo de largura */
+}
+
+input[type="button"] {
+    background-color: #4dff3d;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="button"]:hover {
+    background-color: #15ff00;
+}
+
+        h1 img {
+            max-width: 20%;
+        }
+        h1 {
+            display: flex;
+            align-items: center;
+        }
+        @media screen and (max-width: 600px) {
+            h1 img {
+                max-width: 10%;
+            }
+        }
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+    }
+    .total {
+        margin-top: 4%;
+        flex-direction: column; /* Empilha os elementos em telas menores */
+        align-items: center; /* Centraliza os itens verticalmente */
+    }
+
+    .box,
+    .formulario {
+        width: 100%; /* Ocupa a largura total em telas menores */
+        margin-right: 0; /* Remove o espaço entre os elementos */
+        margin-bottom: 20px; /* Adiciona um espaçamento entre os elementos */
+    }
+}

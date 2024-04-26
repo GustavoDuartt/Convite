@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="total">
+
+        <div class="box">
+            <h1>Bem-vinda ao nosso Encontro!</h1>
+            <p>Preencha o formulário logo após a leitura do convite</p>           
+            <p>Mih você conseguiu fazer com que esses últimos dias fossem os melhores que eu tive até hoje, em tão pouco tempo eu já sinto que vc faz parte da minha rotina. Eu me segurei muito pra não fazer as coisas cedo demais... kkkkkk (Eu tenteiiii) mas já tem um tempo que estamos conversando e a cada dia que passa eu sinto mais vontade de poder olhar pra você e te ver novamente, eu prometi e quero fazer cumprir cada letra que está escrita naquela carta. Eu espero que você confie em mim e me dê uma chance para te provar, eu só preciso de uma chance e nada mais. Sei que você pode não estar preparada totalmente ainda, mas eu estou aqui esperando você e posso esperar o tempo que for... Só vamos rir um do outro, aproveitar o momento e fazer o nosso dia um pouco mais legal. (E VAMO COMEEEEEERRRR) </p>
+
+            <b>Observações:</b><br>
+            <p>Caso aceite: <br> <ul><li>Dia: 11/05</li><li>Levar protetor solar</li><li>Usar uma roupa confortável<br><strong>(eu sei que você é linda mas tenta ir no meu nível pra eu te acompanhar)</strong></li><li>Leve sua barriguinha não tão cheia</li><li>Não se preocupe com nada</li></ul></p>
+        </div>
+
+        <div class="formulario">
+
+            <h2>1° Encontro</h2>
+            <p>Preencha o formulário abaixo para aceitar nosso encontro.</p>
+
+            <form>
+            <label for="nome">Seu Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="nomeM">Nome da minha futura Sogra:</label><br>
+            <input type="text" id="nomeM" name="nomeS" required><br><br>
+
+            <label for="Sim" id="yes">Aceitar</label><br>
+            <input type="radio" id="Sim" name="status" value="aceito" required><br>
+            <label for="Sim" id="nop">Cancelar</label><br>
+            <input type="radio" id="Nao" name="status" value="rejeito" required><br><br>
+
+            <input type="button" value="Enviar Resposta" onclick="sendwpp()">
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        function sendwpp() {
+
+            var phonenumber = "+5561981302523";
+
+            var name = document.getElementById("nome").value;
+            var nameM = document.getElementById("nomeM").value;
+            var status = document.querySelector('input[name="status"]:checked').value;
+            var url = "https://wa.me/" + phonenumber + "?text="
+            +"*Eu :* " +name+ "%0a"
+            +"*Filha da senhorita :* " +nameM+ "%0a"
+            +status+ "%0a" + "*o convite para o encontro* " 
+            
+
+        if (!status) {
+            alert("Por favor, selecione 'Aceitar' ou 'Cancelar' para enviar sua resposta.");
+            return;
+        }
+
+        window.open(url, '_blank').focus();
+
+
+        }
+    </script>
+</body>
+</html>
